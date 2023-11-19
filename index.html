@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Tabela de Pontuação</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+    </head>
+    <body>
+        <header id="header">
+            <div id="container_title">
+                <!--<h1 id="logo">Placar Dinâmico</h1>-->
+                <img src="/logo.png" />
+            </div>
+            <div id="container_actions">
+                <button id="add" class="item_menu" onclick="add_player()">
+                    <span
+                        style="color: #f9f9f9; transform: scale(1.7, 1.7)"
+                        class="material-symbols-outlined"
+                        >add</span
+                    >
+                </button>
+                <div class="add_desc"><small>Adicionar jogador</small></div>
+                <button id="del" class="item_menu" onclick="menuDel()">
+                    <span
+                        style="color: #f9f9f9; transform: scale(1.7, 1.7)"
+                        class="material-symbols-outlined"
+                    >
+                        delete
+                    </span>
+                </button>
+                <div class="del_desc"><small>Remover jogador</small></div>
+                <button id="reset" class="item_menu" onclick="resetAll()">
+                    <span
+                        style="color: #f9f9f9; transform: scale(1.7, 1.7)"
+                        class="material-symbols-outlined"
+                    >
+                        refresh
+                    </span>
+                </button>
+                <div class="res_desc"><small>Resetar pontuação</small></div>
+                <button id="clear" class="item_menu" onclick="removeAll()">
+                    <span
+                        style="color: #f9f9f9; transform: scale(1.7, 1.7)"
+                        class="material-symbols-outlined"
+                    >
+                        clear_all
+                    </span>
+                </button>
+                <div class="del_all_desc"><small>Remover todos</small></div>
+            </div>
+
+            <div class="addPopup" id="popup_add">
+                <div>
+                    <input placeholder="nome" id="in_nome" type="text" />
+                    <input placeholder="url foto" id="in_foto" type="url" />
+                    <subscript style="color: grey; font-size: 1em"
+                        >para usar imagem padrão, digite: default</subscript
+                    >
+                    <button onclick="add()">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="delPopup" id="popup_del">
+                <div>
+                    <select id="options_select"></select>
+                    <button onclick="remover()">Remover</button>
+                </div>
+            </div>
+        </header>
+
+        <section id="main_section">
+            <table id="main_table">
+                <thead>
+                    <tr>
+                        <th>Jogador</th>
+                        <th>Vitórias</th>
+                        <th>Derrotas</th>
+                        <th>Empates</th>
+                        <th>Pontos</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="body_table">
+                    <!--insert with JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <small>©Diego Sousa</small>
+            <small>Criado em novembro 2023</small>
+            <small>Projeto feito durante a Imersão Dev - Alura</small>
+        </footer>
+        <script src="js/index.js"></script>
+    </body>
+</html>

@@ -182,8 +182,8 @@ td img {
 }
 #popup_add {
     background: #f9f9f9;
-    width: 300px;
-    height: 170px;
+    width: 350px;
+    height: 190px;
     position: absolute;
     top: 7%;
     right: 10%;
@@ -228,6 +228,7 @@ input {
     margin: 5px;
 }
 #popup_add button {
+    color: black;
     user-select: none;
     background: #f9f9f9;
     transition:
